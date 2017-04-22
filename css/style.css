@@ -1,0 +1,97 @@
+html,
+body {
+  font-family: Arial, Sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 100%;
+}
+
+ul {
+  list-style: inside;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  overflow: auto;
+  width: 100%;
+  background-color: #fff;
+  font-size: 15px;
+}
+
+ul li {
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 20px 0;
+}
+
+#search {
+  height: 30px;
+  width: 100%;
+  font-size: 15px;
+  margin: 10px 0 20px 0;
+}
+
+#house-view {
+  padding: 20px 0 0 0;
+  height: 400px;
+}
+
+#house-name {
+  padding: 0 0 0 10px;
+}
+
+
+
+
+#house-name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.coffeemenu {
+  background-color: #DBDFC3;
+  height: 100%;
+}
+
+.weather li {
+  display: inline-block;
+  border-bottom: none;
+  margin: 0 20px 0 0;
+}
+
+.app-icons {
+  display: inline-block;
+}
+
+.cerror {
+}
+
+
+@media (max-width: 998px) {
+  .coffeemenu {
+    float: left;
+  }
+}
+
+@media (max-width: 760px) {
+  #house-view {
+    height: 100px;
+  }
+  .coffeemenu {
+    width: 30%;
+  }
+  .app-icons {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .coffeemenu{
+    width: 100%;
+    height: 350px;
+    position: fixed;
+  }
+}

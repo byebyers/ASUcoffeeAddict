@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="descripton" content="ASU Coffee Addict Map">
+		<meta name="author" content="Jacob Byers">
+		<title>ASU Coffee Addict</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+
+	<body>
+		<div class="col-md-3 coffeemenu">
+			<h2>ASU Coffee Addict</h2>
+			<div data-bind="css:navStatus">
+				<input id="search" placeholder="Search by name" data-bind="textInput: userInput, event: {keyup: filterMarkers}">
+				<div id="list-holder">
+					<ul id="house-view" data-bind="foreach: visible" class="col-md-12">
+						<li id="house-name" data-bind="text: title, click: $parent.showInfo"></li>
+					</ul>
+				</div>
+				<div class="weather">
+					<h4>Tempe Weather Forecast</h4>
+					<ul class="forecast col-md-12">
+					</ul>
+				</div>
+				<div class="app-icons">
+					<img src="img/weather.png" alt="weather underground logo">
+					<img src="img/fs.png" alt="foursquare logo">
+				</div>
+			</div>
+		</div>
+
+		<div id="map" data-bind="click: hideElements" class="col-md-9"></div>
+
+		
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/knockout-3.4.2.js"></script>
+		<script src="js/weather.js"></script>
+		<script src="js/app.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBT5WRhECzLiIU4xDRF22wCV8oQcjksSP0&v=3&callback=initializeGMap" onerror="gMapError()"></script>
+
+	</body
+	
+</html>
